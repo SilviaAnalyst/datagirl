@@ -270,7 +270,7 @@ section {
 .about-containers {
   gap: 2rem;
   margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-top: 6rem;
 }
 
 .about-details-container {
@@ -321,7 +321,7 @@ section {
 }
 
 .experience-sub-title {
-  color: rgb(85, 85, 85);
+  color: rgb(85, 85, 100);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
