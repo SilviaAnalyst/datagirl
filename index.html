@@ -42,6 +42,25 @@
       </div>
     </nav>
     <nav id="hamburger-nav">
+      <div class="blob" id="blob1">
+        <div class="face">
+          <div class="eye left-eye">
+            <div class="pupil left-pupil"></div>
+          </div>
+          <div class="eye right-eye">
+            <div class="pupil right-pupil"></div>
+          </div>
+          <div class="mouth" id="mouth"></div>
+        </div>
+      </div>
+    
+      <!-- Modal -->
+      <div class="modal" id="gameModal">
+        <div class="modal-content">
+          <p>If you lose to me, you must hire me 😈</p>
+          <button onclick="closeModal()">Accept Challenge</button>
+        </div>
+      </div>
       <div class="logo">Silvia Mwashi</div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
@@ -52,7 +71,7 @@
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Services</a></li>
+          <li><a href="#Services" onclick="toggleMenu()">Services</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
@@ -166,7 +185,7 @@ For me, development isn’t just a job; it’s a way to connect, create, and lea
                 <div class="article-inner">
                   <h3>HTML</h3>
                   <p>Experienced</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p> I create well-structured web pages with clean, semantic code.</p>
                 </div>
               </article>
               <article class="left" data-index="1" >
@@ -178,7 +197,7 @@ For me, development isn’t just a job; it’s a way to connect, create, and lea
                 <div class="article-inner">
                   <h3>CSS</h3>
                   <p>Experienced</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p>I design responsive and visually appealing layouts using modern styling techniques.</p>
                 </div>
               </article>
               <article class="left" data-index="2">
@@ -190,7 +209,7 @@ For me, development isn’t just a job; it’s a way to connect, create, and lea
                 <div class="article-inner"> 
                   <h3>JavaScript</h3>
                   <p>Experienced</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p> I add interactivity to websites, from animations to user-driven features.</p>
                 </div>
               </article>
               <article class="left" data-index="3">
@@ -203,7 +222,7 @@ For me, development isn’t just a job; it’s a way to connect, create, and lea
                 <div class="article-inner">
                   <h3>Python</h3>
                   <p>Experienced</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p> I write scripts for data analysis, automation, and backend tasks.</p>
                 </div>
                 
               </article>
@@ -218,7 +237,7 @@ For me, development isn’t just a job; it’s a way to connect, create, and lea
                 <div class="article-inner">
                   <h3>SQL</h3>
                   <p>Intermediate</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p>I work with databases to store, retrieve, and analyze structured data.</p>
                 </div>
               </article>
               <article class="left" data-index="5">
@@ -230,7 +249,7 @@ For me, development isn’t just a job; it’s a way to connect, create, and lea
                 <div class="article-inner">
                   <h3>Excel</h3>
                   <p>Experienced</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <p>I use Excel for data cleaning, analysis, and building insightful reports.</p>
                 </div>
               </article>
                
@@ -247,114 +266,19 @@ For me, development isn’t just a job; it’s a way to connect, create, and lea
         class="icon arrow"
         onclick="location.href='./#projects'"
       />
-    <!-- </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/tableau.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Tableau Public</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://public.tableau.com/app/profile/silvia.mwashi/viz/BritishAirways_17262285503840/Dashboard1'"
-              >
-                project One
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://public.tableau.com/app/profile/silvia.mwashi/viz/BritishAirways_17262285503840/Dashboard1'"
-              >
-                project Two
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://public.tableau.com/app/profile/silvia.mwashi/viz/BritishAirways_17262285503840/Dashboard1'"
-              >
-                project Three
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/python_1822899.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Python</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Project One
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-              Project Two
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/excel_732220.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Excel</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/SilviaAnalyst/Coffee-Sales-Analysis'"
-              >
-                project One
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/SilviaAnalyst/South-America-McDonald-s-Sales'"
-              >
-                Project Two
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/sql-server_2772128.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">SQL</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                project One
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Project Two
-              </button>
-            </div>
-          </div>
+     </section>
+     <section id="Services"> 
+      <p class="section__text__p1">What I Offer</p>
+   <section id="services-preview" class="centered-section">
+  <h1>💼 My Services</h1>
+  <p>I offer professional web development, data analysis, automation solutions and much more.</p>
+  <a href="service.html" class="btn"  target="_blank">View My Services</a>
+</section>
+
+</div>
+
+</div>
+
         </div>
       </div>
       <img
@@ -362,7 +286,7 @@ For me, development isn’t just a job; it’s a way to connect, create, and lea
         alt="Arrow icon"
         class="icon arrow"
         onclick="location.href='./#contact'"
-      /> -->
+      />
     </section>
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
@@ -392,7 +316,7 @@ For me, development isn’t just a job; it’s a way to connect, create, and lea
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#Services">Services</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>

@@ -1,7 +1,7 @@
 @media screen and (max-width: 1400px) {
     #profile {
       height: 83vh;
-      margin-bottom: 6rem;
+      margin-bottom: 10rem;
     }
     .about-containers {
       flex-wrap: wrap;
@@ -52,10 +52,56 @@
     footer {
       height: 40vh;
     }
-    #profile {
-      height: 83vh;
-      margin-bottom: 0;
-    }
+   #profile {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    height: auto;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .section__pic-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .profile-pic {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .section__text h1.title {
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+  }
+
+  .section__text__p1,
+  .section__text__p2 {
+    font-size: 1.1rem;
+  }
+
+  .btn-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  #socials-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+}
     article {
       font-size: 1rem;
     }
@@ -73,7 +119,7 @@
     }
     .contact-info-container p,
     .nav-links li a {
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
     .experience-sub-title {
       font-size: 1.25rem;
@@ -82,13 +128,13 @@
       font-size: 1.5rem;
     }
     .nav-links {
-      flex-direction: column;
+      /* flex-direction: column; */
       gap: 0.5rem;
       text-align: center;
     }
     .section__pic-container {
       width: auto;
-      height: 46vw;
+      /* height: 46vw; */
       justify-content: center;
     }
     .section__text__p2 {
@@ -100,4 +146,40 @@
     .text-container {
       text-align: justify;
     }
+
+     #gameModal {
+    flex-direction: column;
+    padding: 1rem;
   }
+
+  #gameModal * {
+    max-width: 90%;
+    text-align: center;
+  }
+  
+
+  /* Default styles (for larger screens) */
+#blob1 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff8edb, #8edaff);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#gameModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+
+

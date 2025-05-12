@@ -87,6 +87,7 @@ body{
     text-transform: uppercase;
     font-weight: bold;
     opacity: 0;
+    color: #000;
     animation: animate 1s ease-in-out 1 forwards;
 }
 
@@ -94,15 +95,23 @@ body{
     margin-top: 10px;
     margin-bottom: 20px;
     opacity: 0;
+    color: #000;
     animation: animate 1s ease-in-out 0.3s 1 forwards;
 }
 
 .content button{
     padding: 10px 20px;
-    border: none;
+    border: plum 2px solid;
+    border-radius: 10px;
+    background: black;
+    color: white;
     cursor: pointer;
     opacity: 0;
     animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+.container button:hover{
+    background-color: #505050;
 }
 
 
@@ -129,18 +138,26 @@ body{
     bottom: 20px;
 }
 
+
+
 .button button{
     width: 40px;
-    height: 35px;
+    height: 30px;
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 2px 2px 2px 2px;
     border-radius: 8px;
-    border: none;
+    border: plum 2px solid;
     cursor: pointer;
     margin: 0 5px;
-    border: 1px solid #000;
     transition: 0.3s;
+    color: #eee;
+    background-color: #000;
+    align-items: center;
+    justify-content: center;
 }
 
 .button button:hover{
-    background: #ababab;
-    color: #fff;
+    background: rgb(255, 68, 255);
+  color: white;
 }

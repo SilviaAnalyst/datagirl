@@ -47,16 +47,20 @@
     }
 
     // Sinister smile and modal on blob click
-    if (blob) {
-      blob.addEventListener('click', () => {
-        if (mouth) {
-          mouth.classList.remove('smile', 'big-smile');
-          mouth.classList.add('sinister-smile');
-        }
-        if (gameModal) gameModal.style.display = 'flex';
-        document.body.style.backgroundColor = '#f8d7da';
-      });
-    }
+    function handleBlobTap() {
+  if (mouth) {
+    mouth.classList.remove('smile', 'big-smile');
+    mouth.classList.add('sinister-smile');
+  }
+  if (gameModal) gameModal.style.display = 'flex';
+  document.body.style.backgroundColor = '#f8d7da';
+}
+
+if (blob) {
+  blob.addEventListener('click', handleBlobTap);
+  blob.addEventListener('touchstart', handleBlobTap);
+}
+
 
     // Eye tracking effect
     document.addEventListener('mousemove', (e) => {
