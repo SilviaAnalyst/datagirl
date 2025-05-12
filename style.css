@@ -9,6 +9,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  
 }
 
 html {
@@ -31,18 +32,28 @@ a,
 nav,
 .nav-links {
   display: flex;
+ 
+ 
 }
 
 nav {
   justify-content: space-around;
   align-items: center;
   height: 17vh;
+  border-bottom: 2px pink solid;
+  
 }
 
 .nav-links {
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
+  
+}
+
+.nav-links li{
+  border-right: 2px pink solid ;
+  padding: 5px;
 }
 
 a {
@@ -154,6 +165,7 @@ section {
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
+ 
 }
 
 .section-container {
@@ -164,7 +176,7 @@ section {
 
 #profile {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 5rem;
   height: 80vh;
 }
@@ -174,11 +186,22 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
+  
+
 }
+
+.profile-pic {
+  width: 500px;     /* Wider */
+  height: 400px;    /* Taller */
+  border-radius: 50%;  /* Creates oval when width ≠ height */
+  object-fit: cover;   /* Keeps image nicely cropped */
+}
+
 
 .section__text {
   align-self: center;
   text-align: center;
+  
 }
 
 .section__text p {
@@ -190,7 +213,7 @@ section {
 }
 
 .section__text__p2 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
@@ -315,7 +338,6 @@ section {
 }
 
 /* EXPERIENCE SECTION */
-
 #experience {
   position: relative;
 }
@@ -340,13 +362,61 @@ section {
   flex-direction: row;
   gap: 2.5rem;
   justify-content: space-around;
+  
 }
 
-article {
+.article-container article {
   display: flex;
-  width: 10rem;
+  width: 30rem;
   justify-content: space-around;
-  gap: 0.5rem;
+  gap: 1rem;
+  margin-bottom: 30px;
+  border: 2px solid plum;
+  border-radius: 10px;
+  opacity: 0; /* Start hidden */
+  transform: translateY(-40px); /* Start off to the left */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Fade in and slide in */
+  padding: 15px;
+}
+
+/* Staircase effect */
+.article-container article:nth-of-type(odd) {
+  transform: translateY(40px);
+}
+
+.article-container article:nth-of-type(even) {
+  transform: translateY(-40px);
+}
+
+/* Animation effect for fade-in and slide-in from down-up */
+.article-container article:nth-child(1) {
+  animation: fadeInSlide 0.5s forwards 0s;
+}
+.article-container article:nth-child(2) {
+  animation: fadeInSlide 0.5s forwards 0.5s;
+}
+.article-container article:nth-child(3) {
+  animation: fadeInSlide 0.5s forwards 1s;
+}
+.article-container article:nth-child(4) {
+  animation: fadeInSlide 0.5s forwards 1.5s;
+}
+.article-container article:nth-child(5) {
+  animation: fadeInSlide 0.5s forwards 2s;
+}
+.article-container article:nth-child(6) {
+  animation: fadeInSlide 0.5s forwards 2.5s;
+}
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(40px); /* Start off to the left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Slide to normal position */
+  }
 }
 
 article .icon {
