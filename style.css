@@ -502,4 +502,109 @@ footer p {
 }
 
 
-/* projects page */
+/* blob */
+.blob {
+  width: 200px;
+  height: 150px;
+  background: linear-gradient(135deg, #ff8edb, #8edaff);
+  border-radius: 50% 50% 60% 40% / 50% 60% 40% 50%;
+  animation: blob-move 5s infinite ease-in-out;
+  margin-top: 50px;
+  position: relative;
+  cursor: pointer;
+  z-index: 99;
+}
+
+@keyframes blob-move {
+  0% { border-radius: 50% 50% 60% 40% / 50% 60% 40% 50%; }
+  50% { border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%; }
+  100% { border-radius: 50% 50% 60% 40% / 50% 60% 40% 50%; }
+}
+
+/* Face */
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.eye {
+  width: 20px;
+  height: 20px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 40%;
+  transition: transform 0.2s ease;
+}
+
+.left-eye {
+  left: 35%;
+}
+
+.right-eye {
+  right: 35%;
+}
+
+.mouth {
+  width: 40px;
+  height: 20px;
+  border-bottom: 5px solid black;
+  border-radius: 0 0 40px 40px;
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s ease;
+  
+}
+
+.mouth.smile {
+  border-bottom: 5px solid black;
+  border-top: none;
+  height: 20px;
+  border-radius: 0 0 40px 40px;
+}
+
+.mouth.frown {
+  border-top: 5px solid black;
+  border-bottom: none;
+  height: 20px;
+  border-radius: 40px 40px 0 0;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  color: black;
+}
+
+.modal-content button {
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border: none;
+  background: #8ef;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.modal-content button:hover {
+  background: #6cf;
+}
