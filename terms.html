@@ -1,0 +1,85 @@
+<!-- This will be loaded into index.html -->
+<style>
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    background: #fff;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .terms-box {
+    height: 200px;
+    overflow-y: auto;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  #proceedBtn:disabled {
+    background: gray;
+    cursor: not-allowed;
+  }
+
+  .btn-row {
+    display: flex;
+    gap: 10px;
+  }
+
+  .btn-row button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #proceedBtn {
+    background: #007bff;
+    color: white;
+  }
+
+  #cancelBtn {
+    background: #dc3545;
+    color: white;
+  }
+</style>
+
+<!-- Modal HTML -->
+<div class="modal" id="termsModal">
+  <div class="modal-content">
+    <h3>Terms and Conditions</h3>
+    <div class="terms-box">
+      <p><strong>1.</strong>70% downpayment before work begins. </p>
+      <p><strong>2.</strong> No sexual advances allowed.</p>
+      <p><strong>3.</strong> No sudden jobs during existing projects.</p>
+      <p><strong>4.</strong> One review only after final delivery.</p>
+      <p><strong>5.</strong> Working hours: 9AM–5PM (EAT). Clients abroad: hours adjusted.</p>
+      <p><strong>6.</strong> Receipts issued for all payments.</p>
+      <p><strong>7.</strong> Job summary shared before start.</p>
+      <p><strong>8.</strong> Contract must be signed.</p>
+      <p><strong>9.</strong> Communication: Email / WhatsApp (0111400028).</p>
+      <p><strong>10.</strong> Payment via M-PESA (0111400028) or bank (if provided).</p>
+    </div>
+    <label>
+      <input type="checkbox" id="agreeCheckbox" onchange="toggleProceedBtn()">
+      I agree to the terms and conditions
+    </label><br><br>
+    <div class="btn-row">
+      <button id="proceedBtn" disabled onclick="proceedBooking()">Proceed to WhatsApp</button>
+      <button id="cancelBtn" onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+</div>

@@ -61,12 +61,17 @@
       border-radius: 6px;
       transition: background-color 0.3s ease;
     }
-    .book-btn {
-      background-color: none;
-      color: rgb(10, 10, 10);
+    .btnbook-btn{
+      background-color: rgb(53, 51, 51);
+      color: white;
       border: plum 2px solid;
+      width: auto;
+      height: 40px;
+      cursor: pointer;
+      text-transform: capitalize;
+
     }
-    .book-btn:hover {
+    .btnbook-btn:hover {
       background-color: #f0038d;
     }
     .pay-btn {
@@ -120,8 +125,8 @@
         </div>
       </div>
 
-      <a href="booking.html?service=Premium+Site" class="btn book-btn">Book</a>
-      <a href="https://your-payment-link.com/premium" class="btn pay-btn">Pay</a>
+      <!-- <a href="booking.html?service=Premium+Site" class="btn book-btn">Book</a>
+      <a href="https://your-payment-link.com/premium" class="btn pay-btn">Pay</a> -->
     </div>
 
     <!-- Data Analysis -->
@@ -148,8 +153,8 @@
         </div>
       </div>
 
-      <a href="booking.html?service=Ongoing+Analytics" class="btn book-btn">Book</a>
-      <a href="https://your-payment-link.com/ongoing" class="btn pay-btn">Pay</a>
+      <!-- <a href="booking.html?service=Ongoing+Analytics" class="btn book-btn">Book</a>
+      <a href="https://your-payment-link.com/ongoing" class="btn pay-btn">Pay</a> -->
     </div>
 
     <!-- Automation & Scripts -->
@@ -175,8 +180,8 @@
           </div>
         </div>
       </div>
-      <a href="booking.html?service=Custom+Tool" class="btn book-btn">Book</a>
-      <a href="https://your-payment-link.com/custom" class="btn pay-btn">Pay</a>
+      <!-- <a href="booking.html?service=Custom+Tool" class="btn book-btn">Book</a>
+      <a href="https://your-payment-link.com/custom" class="btn pay-btn">Pay</a> -->
     </div>
 
     <!-- Database -->
@@ -202,18 +207,55 @@
           </div>
         </div>
       </div>
-      <a href="booking.html?service=Optimization" class="btn book-btn">Book</a>
-      <a href="https://your-payment-link.com/optimize" class="btn pay-btn">Pay</a>
+      
     </div>
+
+    <button  class="btnbook-btn" onclick="showModal()">Book for consultation</button>
+    <!-- <a href="https://your-payment-link.com/optimize" class="btn pay-btn">Pay</a> -->
+
+    <div id="termsContainer"></div>
 
     <!-- Custom Services -->
     <div class="card">
       <h2>💬 Need Something Custom?</h2>
       <p>Let’s talk — I'm open to custom solutions, partnerships, or long-term collaborations.</p>
-      <a href="booking.html?service=Custom+Request" class="btn book-btn">Contact Me</a>
+      <!-- <a href="booking.html?service=Custom+Request" class="btn book-btn">Contact Me</a> -->
     </div>
 
     <a href="index.html" class="back-btn">⬅ Back to Home</a>
+
   </div>
+
+  <script>
+    // Load external HTML into the page
+    fetch('terms.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('termsContainer').innerHTML = data;
+      });
+  </script>
+
+  <!-- Add this script in a separate JS file or directly here -->
+  <script>
+    function showModal() {
+      document.getElementById("termsModal").style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("termsModal").style.display = "none";
+      document.getElementById("agreeCheckbox").checked = false;
+      document.getElementById("proceedBtn").disabled = true;
+    }
+
+    function toggleProceedBtn() {
+      const checkbox = document.getElementById("agreeCheckbox");
+      document.getElementById("proceedBtn").disabled = !checkbox.checked;
+    }
+
+    function proceedBooking() {
+      closeModal();
+      window.location.href = "https://wa.me/254111400028?text=Hi%20Silvia,%20I%20have%20read%20and%20agreed%20to%20your%20terms%20and%20would%20like%20to%20book%20an%20appointment.";
+    }
+  </script>
 </body>
 </html>
